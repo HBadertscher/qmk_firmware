@@ -69,3 +69,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        _______, _______, _______, _______, _______, _______, _______, CH_0,    CH_0,    CH_DOT,  _______, _______\
     )
 };
+
+
+void keyboard_post_init_user(void) {
+    // Disable RGB light by default
+    rgblight_disable_noeeprom();
+}
+
+uint32_t layer_state_set_user(uint32_t state) {
+    // This is called after each pressed key I think
+    switch (biton32(state)) {
+        case _RAISE:
+            rgblight_enable_noeeprom();
+            rgblight_sethsv_noeeprom(HSV_RED);
+            rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+            break;
+        default:
+            rgblight_disable_noeeprom();
+            break;
+    }
+    return state;
+}
