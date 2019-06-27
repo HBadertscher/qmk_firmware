@@ -85,7 +85,14 @@ uint32_t layer_state_set_user(uint32_t state) {
             rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
             break;
         default:
-            rgblight_disable_noeeprom();
+            if (IS_HOST_LED_ON(USB_LED_CAPS_LOCK)) {
+                    rgblight_enable_noeeprom();
+                    rgblight_sethsv_noeeprom(HSV_AZURE);
+                    rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+            }
+            else {
+                rgblight_disable_noeeprom();
+            }
             break;
     }
     return state;
