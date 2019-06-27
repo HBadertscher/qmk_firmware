@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESC,  CH_1,    CH_2,    CH_3,    CH_4,    CH_5,    CH_6,    CH_7,    CH_8,    CH_9,    CH_0,    KC_BSPC,      \
         KC_TAB,  CH_Q,    CH_W,    CH_E,    CH_R,    CH_T,    CH_Z,    CH_U,    CH_I,    CH_O,    CH_P,    CH_DLR,      \
         KC_ENT,  CH_A,    CH_S,    CH_D,    CH_F,    CH_G,    CH_H,    CH_J,    CH_K,    CH_L,    CH_OE,   CH_AE,      \
-        KC_LSFT, MT(MOD_LCTL, CH_Y),    CH_X,    CH_C,    CH_V,    CH_B,    CH_N,    CH_M,    CH_COMM, CH_DOT,  MT(MOD_RCTL, CH_SLSH), KC_RSFT,      \
+        KC_LSFT, MT(MOD_LCTL, CH_Y),    CH_X,    CH_C,    CH_V,    CH_B,    CH_N,    CH_M,    CH_COMM, CH_DOT,  MT(MOD_RCTL, CH_MINS), KC_RSFT,      \
      MO(_RAISE), KC_LALT, KC_LEFT, KC_RIGHT,KC_BSPC, KC_SPC,  KC_SPC,  KC_ENT,  KC_UP,   KC_DOWN, CH_UE,   MO(_RAISE)   \
     ),
 
@@ -52,11 +52,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |      |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10 |      |
      * |------+------+------+------+------+------+------+------+------+------+------+------|
      * |      |   /  |   @  |   {  |   }  |  !   |  ?   |   7  |   8  |   9  |      |      |
-     * |------+------+------+------+------+------+------+------+------+------+------|      |
+     * |------+------+------+------+------+------+------+------+------+------+------|------|
      * |      |   #  |   ~  |   (  |   )  |  \   |      |   4  |   5  |   6  |      |      |
-     * |------+------+------+------+------+------+------+------+------+------+------|      |
-     * |      |   %  |   ^  |   [  |   ]  |  |   |      |   1  |   2  |   3  |      |      |
-     * |------+------+------+------+------+------+------+------+------+------+------|      |
+     * |------+------+------+------+------+------+------+------+------+------+------|------|
+     * | Caps |   %  |   ^  |   [  |   ]  |  |   |      |   1  |   2  |   3  |      |      |
+     * |------+------+------+------+------+------+------+------+------+------+------|------|
      * |      |      |      |      |      |             |      0      |   .  |      |      |
      * `-----------------------------------------------------------------------------------'
      */
@@ -65,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______,  \
        _______, CH_SLSH, CH_AT,   CH_LCBR, CH_RCBR, CH_EXLM, CH_QST,  CH_7,    CH_8,    CH_9,    _______, _______, \
        _______, CH_HASH, CH_TILD, CH_LPRN, CH_RPRN, CH_BSLS, _______, CH_4,    CH_5,    CH_6,    _______, _______, \
-       _______, CH_PERC, CH_CARR, CH_LBRC, CH_RBRC, CH_PIPE, _______, CH_1,    CH_2,    CH_3,    _______, _______, \
+       KC_CAPS, CH_PERC, CH_CARR, CH_LBRC, CH_RBRC, CH_PIPE, _______, CH_1,    CH_2,    CH_3,    _______, _______, \
        _______, _______, _______, _______, _______, _______, _______, CH_0,    CH_0,    CH_DOT,  _______, _______\
     )
 };
